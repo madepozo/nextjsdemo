@@ -17,14 +17,14 @@ const CommerceContainer = (props: Props) => {
 	const { data, product } = props.commerce;
 	const { name, whatsappNumber } = data;
 
-	useEffect(() => {
-		(() => {
-			console.log(props.url);
-			db.ref(props.url).on('value', (data) => {
-				console.log('Data >', data);
-			});
-		})();
-	}, []);
+	// useEffect(() => {
+	// 	(() => {
+	// 		console.log(props.url);
+	// 		db.ref(props.url).on('value', (data) => {
+	// 			console.log('Data >', data);
+	// 		});
+	// 	})();
+	// }, []);
 
 	const commerceInfo = {
 		phone: whatsappNumber
