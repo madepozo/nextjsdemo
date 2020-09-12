@@ -24,9 +24,14 @@ const HomePage = ({ commerces = [] }) => {
 };
 
 export const getServerSideProps = async () => {
-	const data = await db
-		.ref('/companies/489/0501662316001/commerces')
-		.once('value');
+	const data: any = await new Promise((resolve, reject) => {
+		db.ref('/companies/489/0501662316001/commerces')
+			.once('value')
+			.then((data) => {
+				resolve(data);
+			});
+	});
+
 	const commerces = await data.val();
 
 	return {
