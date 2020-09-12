@@ -2,7 +2,10 @@ import Link from 'next/link';
 
 import { db } from '../config/firebase-config';
 
-const HomePage = ({ commerces = [] }) => {
+const HomePage = ({ commerces = [], failed }) => {
+	if (failed) {
+		return <div>We have problems! :(</div>;
+	}
 	return (
 		<div>
 			<ul>
@@ -24,26 +27,39 @@ const HomePage = ({ commerces = [] }) => {
 };
 
 export const getServerSideProps = async () => {
-	const data: any = await new Promise((resolve, reject) => {
-		db.ref('/companies/489/0501662316001/commerces')
-			.once('value')
-			.then((data) => {
-				resolve(data);
-			});
-	});
+	console.log('Index > getServerSideProps');
+	try {
+		const data: any = await new Promise((resolve, reject) => {
+			db.ref('/companies/489/0501662316001/commerces')
+				.once('value')
+				.then((data) => {
+					resolve(data);
+				});
+		});
 
-	const commerces = await data.val();
+		console.log('I got the data!');
+
+		const commerces = await data.val();
+
+		console.log('I got the commerces:', Object.keys(commerces));
+
+		return {
+			props: {
+				commerces: Object.keys(commerces)
+					.map((key) => {
+						const { name, slug = '' } = commerces[key].data;
+
+						return { name, slug };
+					})
+					.filter((commerce) => !!commerce.slug)
+			}
+		};
+	} catch (err) {
+		console.log('Err >', err);
+	}
 
 	return {
-		props: {
-			commerces: Object.keys(commerces)
-				.map((key) => {
-					const { name, slug = '' } = commerces[key].data;
-
-					return { name, slug };
-				})
-				.filter((commerce) => !!commerce.slug)
-		}
+		props: { failed: true }
 	};
 };
 
