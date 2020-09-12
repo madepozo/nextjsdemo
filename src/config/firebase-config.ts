@@ -1,6 +1,9 @@
+import getConfig from 'next/config';
 import firebase from 'firebase';
 
-const firebaseConfig = {
+const { publicRuntimeConfig } = getConfig();
+
+const firebaseConfig = publicRuntimeConfig.firebaseConfig || {
 	apiKey: process.env.API_KEY,
 	authDomain: process.env.AUTH_DOMAIN,
 	databaseURL: process.env.DB_URL,
