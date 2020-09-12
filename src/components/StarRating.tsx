@@ -7,11 +7,11 @@ interface IProps {
 }
 
 const StarRating = (props: IProps) => {
-	const { currentRating, numberOfStars = 5 } = props;
+	const { currentRating } = props;
 
 	return (
 		<StarRatingStyled>
-			{[...Array(numberOfStars).keys()].map((n, i) => (
+			{[0, 1, 2, 3, 4].map((n, i) => (
 				<span
 					className={`star ${currentRating >= i + 1 ? 'active' : ''}`}
 					key={i + 1}

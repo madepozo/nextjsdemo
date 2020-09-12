@@ -1,4 +1,4 @@
-const breakpoints = ['380px', '768px', '1024px', '1280px', '1600px'];
+const breakpoints: any = ['380px', '768px', '1024px', '1280px', '1600px'];
 
 breakpoints.sm = breakpoints[0];
 breakpoints.md = breakpoints[1];
