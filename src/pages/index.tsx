@@ -1,6 +1,7 @@
 import { db } from '../config/firebase-config';
 
-const Index = () => {
+const Index = (props) => {
+	console.log('Props >', props);
 	return (
 		<div>
 			<h2>Index Page!</h2>
@@ -28,14 +29,17 @@ export const getServerSideProps = async () => {
 
 		return {
 			props: {
-				commerces: commerces
+				commerces,
+				success: true
 			}
 		};
 	} catch (err) {
 		console.log('Err >', err);
 
 		return {
-			props: { success: false }
+			props: {
+				success: false
+			}
 		};
 	}
 };

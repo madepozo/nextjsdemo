@@ -1,4 +1,4 @@
-const Abount = ({ numbers }) => {
+const About = ({ numbers }) => {
 	return (
 		<div>
 			<ul>
@@ -30,4 +30,4 @@ export const getServerSideProps = async () => {
 	};
 };
 
-export default Abount;
+export default About;
