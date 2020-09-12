@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import { db } from '../config/firebase-config';
 
-function Index(props) {
+const Index = (props) => {
 	const { commerces } = props;
+
 	return (
 		<ul>
 			{commerces.map((commerce, index) => (
@@ -19,11 +20,11 @@ function Index(props) {
 			))}
 		</ul>
 	);
-}
+};
 
 export async function getServerSideProps() {
 	try {
-		const data: any = await new Promise((resolve, reject) => {
+		const data: any = await new Promise((resolve) => {
 			db.ref('/companies/489/0501662316001/commerces')
 				.once('value')
 				.then((data) => {
