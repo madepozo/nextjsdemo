@@ -3,6 +3,7 @@ const dotenv = require('dotenv');
 dotenv.config({ path: `./.env` });
 
 module.exports = {
+	target: 'serverless',
 	publicRuntimeConfig: {
 		firebaseConfig: {
 			apiKey: process.env.API_KEY,
