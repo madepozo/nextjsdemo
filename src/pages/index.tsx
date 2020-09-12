@@ -53,7 +53,7 @@ export const getServerSideProps = async () => {
 
 		return {
 			props: {
-				commerces
+				commerces: commerces
 			}
 		};
 	} catch (err) {
