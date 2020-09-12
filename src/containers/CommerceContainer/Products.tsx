@@ -40,7 +40,7 @@ const ProductsStyled = styled.section`
 	margin-top: 18px;
 
 	.category {
-		color: ${(props) => props.theme.colors.black};
+		color: ${(props: any) => props.theme.colors.black};
 		font-size: 20px;
 		font-weight: bold;
 		padding: 0 20px;
@@ -54,8 +54,8 @@ const ProductsStyled = styled.section`
 
 	.show-more {
 		border-radius: 5px;
-		border: solid 1px ${(props) => props.theme.colors.green};
-		color: ${(props) => props.theme.colors.green};
+		border: solid 1px ${(props: any) => props.theme.colors.green};
+		color: ${(props: any) => props.theme.colors.green};
 		font-size: 12px;
 		font-weight: 600;
 		height: 30px;

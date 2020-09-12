@@ -28,12 +28,12 @@ const ProductContainer = (props: IProps) => {
 
 const ProductContainerStyled = styled.section`
 	padding: 10px 60px;
-	background: ${(props) => props.theme.colors.light_gray};
+	background: ${(props: any) => props.theme.colors.light_gray};
 
 	.commerce-title {
-		background: ${(props) => props.theme.colors.white};
+		background: ${(props: any) => props.theme.colors.white};
 		height: 58px;
-		color: ${(props) => props.theme.colors.red};
+		color: ${(props: any) => props.theme.colors.red};
 	}
 
 	.product-content {

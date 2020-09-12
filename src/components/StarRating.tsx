@@ -26,12 +26,12 @@ const StarRating = (props: IProps) => {
 
 const StarRatingStyled = styled.div`
 	.star {
-		color: ${(props) => props.theme.colors.light_gray};
+		color: ${(props: any) => props.theme.colors.light_gray};
 		font-size: 12px;
 		margin: 0 1px;
 
 		&.active {
-			color: ${(props) => props.theme.colors.red};
+			color: ${(props: any) => props.theme.colors.red};
 		}
 	}
 `;

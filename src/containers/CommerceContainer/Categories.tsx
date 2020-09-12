@@ -28,7 +28,7 @@ const Categories = (props: IProps) => {
 
 const CategoriesStyled = styled.div`
 	border-radius: 12px;
-	background: ${(props) => props.theme.colors.white};
+	background: ${(props: any) => props.theme.colors.white};
 	box-shadow: 0 2px 12px 0 rgba(230, 230, 230, 0.5);
 	display: flex;
 	align-items: center;
@@ -37,7 +37,7 @@ const CategoriesStyled = styled.div`
 	padding: 5px 16px;
 
 	.tatal-found {
-		color: ${(props) => props.theme.colors.black};
+		color: ${(props: any) => props.theme.colors.black};
 		font-size: 12px;
 	}
 `;

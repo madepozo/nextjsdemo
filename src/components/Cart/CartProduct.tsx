@@ -29,8 +29,8 @@ const CartProductStyled = styled.article`
 	margin-bottom: 20px;
 
 	.commerce-name {
-		background: ${(props) => props.theme.colors.black};
-		color: ${(props) => props.theme.colors.white};
+		background: ${(props: any) => props.theme.colors.black};
+		color: ${(props: any) => props.theme.colors.white};
 		border-radius: 4px;
 		text-align: center;
 		font-size: 12px;
@@ -51,16 +51,16 @@ const CartProductStyled = styled.article`
 
 		.product-name {
 			font-size: 12px;
-			color: ${(props) => props.theme.colors.black};
+			color: ${(props: any) => props.theme.colors.black};
 			line-height: 1.5;
 			padding: 2px;
 			width: 90px;
 		}
 
 		.product-amount {
-			border: 1px solid ${(props) => props.theme.colors.red};
+			border: 1px solid ${(props: any) => props.theme.colors.red};
 			border-radius: 50%;
-			color: ${(props) => props.theme.colors.red};
+			color: ${(props: any) => props.theme.colors.red};
 			font-size: 14px;
 			line-height: 23px;
 			height: 23px;

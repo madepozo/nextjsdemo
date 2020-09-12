@@ -29,7 +29,7 @@ const BannerSection = (props: IProps) => {
 };
 
 const BannerSectionStyled = styled.section`
-	background: ${(props) => props.theme.colors.white};
+	background: ${(props: any) => props.theme.colors.white};
 	padding: 16px 16px 32px;
 	width: 100%;
 

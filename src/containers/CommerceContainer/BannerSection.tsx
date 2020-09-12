@@ -28,7 +28,7 @@ const BannerSection = ({ commerceInfo }: IProps) => {
 };
 
 const BannerSectionStyled = styled.section`
-	background: ${(props) => props.theme.colors.white};
+	background: ${(props: any) => props.theme.colors.white};
 	width: 100%;
 	padding: 16px 16px 32px;
 
@@ -39,7 +39,7 @@ const BannerSectionStyled = styled.section`
 	}
 
 	.promotions-title {
-		color: ${(props) => props.theme.colors.black};
+		color: ${(props: any) => props.theme.colors.black};
 		font-size: 20px;
 		font-weight: bold;
 		width: 250px;

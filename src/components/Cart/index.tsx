@@ -57,7 +57,7 @@ const Cart = () => {
 };
 
 const CartStyled = styled.div`
-	background: ${(props) => props.theme.colors.white};
+	background: ${(props: any) => props.theme.colors.white};
 	border-radius: 12px;
 	box-shadow: 0 2px 12px 0 rgba(230, 230, 230, 0.5);
 	height: fit-content;
@@ -65,7 +65,7 @@ const CartStyled = styled.div`
 	width: 229px;
 
 	h3 {
-		color: ${(props) => props.theme.colors.red};
+		color: ${(props: any) => props.theme.colors.red};
 		text-transform: uppercase;
 	}
 
@@ -80,7 +80,7 @@ const CartStyled = styled.div`
 	}
 
 	.cart-total {
-		color: ${(props) => props.theme.colors.red};
+		color: ${(props: any) => props.theme.colors.red};
 		font-size: 16px;
 		border-radius: 4px;
 		font-weight: 600;
@@ -139,8 +139,8 @@ const CartStyled = styled.div`
 		display: flex;
 		align-self: flex-end;
 		border-radius: 4px;
-		background: ${(props) => props.theme.colors.green};
-		color: ${(props) => props.theme.colors.white};
+		background: ${(props: any) => props.theme.colors.green};
+		color: ${(props: any) => props.theme.colors.white};
 		height: 49px;
 		width: 100%;
 	}

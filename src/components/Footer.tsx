@@ -65,14 +65,14 @@ const Footer = () => {
 };
 
 const FooterStyled = styled.footer`
-	background: ${(props) => props.theme.colors.white};
+	background: ${(props: any) => props.theme.colors.white};
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	margin-top: 40px;
 
 	.separator {
-		background: ${(props) => props.theme.colors.red};
+		background: ${(props: any) => props.theme.colors.red};
 		height: 26px;
 		width: 100%;
 	}

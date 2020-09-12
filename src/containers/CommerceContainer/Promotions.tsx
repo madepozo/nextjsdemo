@@ -18,7 +18,7 @@ const Promotions = () => {
 
 const PromotionsStyled = styled.div`
 	display: flex;
-	background: ${(props) => props.theme.colors.light_gray};
+	background: ${(props: any) => props.theme.colors.light_gray};
 	border-radius: 12px;
 	justify-content: center;
 	width: 100%;

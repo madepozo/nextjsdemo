@@ -64,7 +64,7 @@ const ProductInfo = (props: IProps) => {
 
 const ProductInfoStyled = styled.div`
 	.product-name {
-		color: ${(props) => props.theme.colors.black};
+		color: ${(props: any) => props.theme.colors.black};
 		font-size: 21px;
 		line-height: 1.1;
 		margin: 10px 0;
@@ -74,7 +74,7 @@ const ProductInfoStyled = styled.div`
 		margin: 12px 0;
 
 		.now {
-			color: ${(props) => props.theme.colors.black};
+			color: ${(props: any) => props.theme.colors.black};
 			font-size: 17px;
 			font-weight: 500;
 			margin-right: 5px;
@@ -92,7 +92,7 @@ const ProductInfoStyled = styled.div`
 		margin: 25px 0;
 
 		.quantity {
-			background: ${(props) => props.theme.colors.light_gray};
+			background: ${(props: any) => props.theme.colors.light_gray};
 			border-radius: 2px;
 			color: #494949;
 			height: 45px;
@@ -106,7 +106,7 @@ const ProductInfoStyled = styled.div`
 			button {
 				background: #494949;
 				border-radius: 2px;
-				color: ${(props) => props.theme.colors.white};
+				color: ${(props: any) => props.theme.colors.white};
 				font-size: 10px;
 				height: 21px;
 				line-height: 21px;
@@ -125,9 +125,9 @@ const ProductInfoStyled = styled.div`
 	}
 
 	.product-add-button {
-		border: solid 1px ${(props) => props.theme.colors.green};
+		border: solid 1px ${(props: any) => props.theme.colors.green};
 		border-radius: 5px;
-		color: ${(props) => props.theme.colors.green};
+		color: ${(props: any) => props.theme.colors.green};
 		height: 45px;
 		font-size: 14px;
 		margin-left: 13px;

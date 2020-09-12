@@ -43,7 +43,7 @@ const Header = () => {
 
 const HeaderStyled = styled.header`
 	.container {
-		background: ${(props) => props.theme.colors.red};
+		background: ${(props: any) => props.theme.colors.red};
 		height: 75px;
 		border-radius: 0;
 		padding: 0 60px;
@@ -64,9 +64,9 @@ const HeaderStyled = styled.header`
 				margin-right: 23px;
 				border-radius: 5px;
 				padding-left: 12px;
-				color: ${(props) => props.theme.colors.gray};
-				border: solid 1px ${(props) => props.theme.colors.white};
-				background-color: ${(props) => props.theme.colors.white};
+				color: ${(props: any) => props.theme.colors.gray};
+				border: solid 1px ${(props: any) => props.theme.colors.white};
+				background-color: ${(props: any) => props.theme.colors.white};
 			}
 		}
 	}

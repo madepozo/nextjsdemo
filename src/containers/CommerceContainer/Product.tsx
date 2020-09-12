@@ -55,7 +55,7 @@ const Product = (props: IProps) => {
 };
 
 const ProductStyled = styled.article`
-	background: ${(props) => props.theme.colors.white};
+	background: ${(props: any) => props.theme.colors.white};
 	flex-direction: column;
 	align-items: center;
 	width: 100%;
@@ -63,8 +63,8 @@ const ProductStyled = styled.article`
 	padding: 8px 6px;
 
 	.discount {
-		background: ${(props) => props.theme.colors.red};
-		color: ${(props) => props.theme.colors.white};
+		background: ${(props: any) => props.theme.colors.red};
+		color: ${(props: any) => props.theme.colors.white};
 		border-radius: 12px 12px 0;
 		font-size: 10px;
 		height: 32px;
@@ -97,7 +97,7 @@ const ProductStyled = styled.article`
 		}
 
 		.view-detail {
-			background: ${(props) => props.theme.colors.white};
+			background: ${(props: any) => props.theme.colors.white};
 			box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
 			position: absolute;
 			border-radius: 50%;
@@ -112,12 +112,12 @@ const ProductStyled = styled.article`
 		}
 
 		.icon-view {
-			color: ${(props) => props.theme.colors.green};
+			color: ${(props: any) => props.theme.colors.green};
 			font-size: 16px;
 		}
 
 		&:hover {
-			background: ${(props) => props.theme.colors.light_gray};
+			background: ${(props: any) => props.theme.colors.light_gray};
 
 			.view-detail {
 				visibility: visible;
@@ -127,7 +127,7 @@ const ProductStyled = styled.article`
 	}
 
 	.product-title {
-		color: ${(props) => props.theme.colors.black};
+		color: ${(props: any) => props.theme.colors.black};
 		font-size: 12px;
 		line-height: 1.25;
 		font-weight: normal;
@@ -142,7 +142,7 @@ const ProductStyled = styled.article`
 		align-items: center;
 
 		.now {
-			color: ${(props) => props.theme.colors.black};
+			color: ${(props: any) => props.theme.colors.black};
 			font-size: 17px;
 			font-weight: 500;
 			margin-right: 5px;
@@ -157,8 +157,8 @@ const ProductStyled = styled.article`
 	}
 
 	.product-add-button {
-		background: ${(props) => props.theme.colors.green};
-		color: ${(props) => props.theme.colors.white};
+		background: ${(props: any) => props.theme.colors.green};
+		color: ${(props: any) => props.theme.colors.white};
 		height: 34px;
 		border-radius: 5px;
 		min-width: 165px;
@@ -178,7 +178,7 @@ const ProductStyled = styled.article`
 		width: 90%;
 
 		.sold {
-			color: ${(props) => props.theme.colors.black};
+			color: ${(props: any) => props.theme.colors.black};
 			border-radius: 5px;
 			background: #f1f1f1;
 			padding: 6px 10px;
@@ -186,7 +186,7 @@ const ProductStyled = styled.article`
 		}
 
 		.rating {
-			color: ${(props) => props.theme.colors.red};
+			color: ${(props: any) => props.theme.colors.red};
 			text-align: center;
 		}
 	}

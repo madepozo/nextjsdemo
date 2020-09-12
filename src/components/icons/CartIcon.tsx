@@ -20,9 +20,9 @@ const CartIconStyled = styled.div`
 	position: relative;
 
 	.total-items {
-		background: ${(props) => props.theme.colors.red};
+		background: ${(props: any) => props.theme.colors.red};
 		border-radius: 50%;
-		color: ${(props) => props.theme.colors.white};
+		color: ${(props: any) => props.theme.colors.white};
 		height: 23px;
 		width: 23px;
 		font-size: 12px;
@@ -33,18 +33,18 @@ const CartIconStyled = styled.div`
 		top: -8px;
 
 		&.white {
-			background: ${(props) => props.theme.colors.white};
-			color: ${(props) => props.theme.colors.red};
+			background: ${(props: any) => props.theme.colors.white};
+			color: ${(props: any) => props.theme.colors.red};
 		}
 	}
 
 	.icon-cart {
-		color: ${(props) => props.theme.colors.green};
+		color: ${(props: any) => props.theme.colors.green};
 		font-size: 24px;
 		font-weight: 500;
 
 		&.white {
-			color: ${(props) => props.theme.colors.white};
+			color: ${(props: any) => props.theme.colors.white};
 		}
 	}
 `;

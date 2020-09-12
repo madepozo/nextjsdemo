@@ -32,14 +32,14 @@ const NavigationStyled = styled.div`
 	height: 40px;
 
 	.container {
-		background: ${(props) => props.theme.colors.light_gray};
+		background: ${(props: any) => props.theme.colors.light_gray};
 		height: 40px;
 	}
 
 	.menu {
 		a {
 			font-size: 12px;
-			color: ${(props) => props.theme.colors.dark_gray};
+			color: ${(props: any) => props.theme.colors.dark_gray};
 			margin: 0 5px;
 			padding: 6px 10px;
 

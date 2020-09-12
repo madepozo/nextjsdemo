@@ -69,7 +69,7 @@ const CommerceInfoStyled = styled.div`
 	}
 
 	.title {
-		color: ${(props) => props.theme.colors.black};
+		color: ${(props: any) => props.theme.colors.black};
 		font-size: 12px;
 		text-transform: uppercase;
 		margin-bottom: 6px;
@@ -79,19 +79,19 @@ const CommerceInfoStyled = styled.div`
 		margin-bottom: 11px;
 
 		.label {
-			color: ${(props) => props.theme.colors.red};
+			color: ${(props: any) => props.theme.colors.red};
 			font-size: 12px;
 		}
 
 		.time {
-			color: ${(props) => props.theme.colors.black};
+			color: ${(props: any) => props.theme.colors.black};
 			font-size: 14px;
 			margin-top: 3px;
 		}
 	}
 
 	.whatsapp {
-		color: ${(props) => props.theme.colors.white};
+		color: ${(props: any) => props.theme.colors.white};
 		max-width: 224px;
 		margin-bottom: 9px;
 		width: 80%;
@@ -123,19 +123,19 @@ const CommerceInfoStyled = styled.div`
 
 			[class^='icon-'] {
 				font-size: 20px;
-				color: ${(props) => props.theme.colors.red};
+				color: ${(props: any) => props.theme.colors.red};
 			}
 		}
 
 		.label {
-			color: ${(props) => props.theme.colors.black};
+			color: ${(props: any) => props.theme.colors.black};
 			font-size: 10px;
 			text-align: center;
 			width: 70px;
 		}
 
 		.value {
-			color: ${(props) => props.theme.colors.red};
+			color: ${(props: any) => props.theme.colors.red};
 			font-size: 18px;
 		}
 	}

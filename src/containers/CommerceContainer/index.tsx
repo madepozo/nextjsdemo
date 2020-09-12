@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import styled from '@emotion/styled';
 
-import { db } from '../../config/firebase-config';
 import { Commerce } from '../../models/Commerce.model';
 import BannerSection from './BannerSection';
 import Cart from '../../components/Cart';
@@ -47,10 +46,10 @@ const CommerceContainer = (props: Props) => {
 
 const CommerceContainerStyled = styled.section`
 	padding: 10px 60px;
-	background: ${(props) => props.theme.colors.light_gray};
+	background: ${(props: any) => props.theme.colors.light_gray};
 
 	.commerce-title {
-		background: ${(props) => props.theme.colors.white};
+		background: ${(props: any) => props.theme.colors.white};
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -58,7 +57,7 @@ const CommerceContainerStyled = styled.section`
 		border-radius: 12px;
 		box-shadow: 0 2px 12px 0 rgba(230, 230, 230, 0.5);
 		text-transform: capitalize;
-		color: ${(props) => props.theme.colors.red};
+		color: ${(props: any) => props.theme.colors.red};
 	}
 
 	.commerce-content {
