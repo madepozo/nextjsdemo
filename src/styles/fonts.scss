@@ -1,0 +1,105 @@
+$font-path: '/fonts';
+
+@font-face {
+	font-family: 'Poppins-Regular';
+	font-weight: normal;
+	src: url('#{$font-path}/Poppins-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'Poppins-Medium';
+	font-weight: 500;
+	src: url('#{$font-path}/Poppins-Medium.ttf');
+}
+
+@font-face {
+	font-family: 'Poppins-SemiBold';
+	font-weight: 600;
+	src: url('#{$font-path}/Poppins-SemiBold.ttf');
+}
+
+@font-face {
+	font-family: 'Poppins-Bold';
+	font-weight: bold;
+	src: url('#{$font-path}/Poppins-Bold.ttf');
+}
+
+@font-face {
+	font-family: 'Poppins-ExtraBold';
+	font-weight: 800;
+	src: url('#{$font-path}/Poppins-ExtraBold.ttf');
+}
+
+@font-face {
+	font-family: 'dp6WebCalPeru';
+	src: url('#{$font-path}/dp6WebCalPeru.ttf?moeqnp') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+
+[class^='icon-'],
+[class*=' icon-'] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'dp6WebCalPeru' !important;
+	speak: never;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-book:before {
+	content: '\e900';
+}
+.icon-cart:before {
+	content: '\e901';
+}
+.icon-facebook .path1:before {
+	content: '\e902';
+	color: rgb(0, 123, 255);
+}
+.icon-facebook .path2:before {
+	content: '\e903';
+	margin-left: -1em;
+	color: rgb(255, 255, 255);
+}
+
+.icon-sale:before {
+	content: '\e908';
+}
+.icon-sold:before {
+	content: '\e909';
+}
+.icon-view:before {
+	content: '\e90a';
+}
+.icon-wsp .path1:before {
+	content: '\e90b';
+	color: rgb(229, 229, 229);
+}
+.icon-wsp .path2:before {
+	content: '\e90c';
+	margin-left: -1em;
+	color: rgb(255, 255, 255);
+}
+.icon-wsp .path3:before {
+	content: '\e90d';
+	margin-left: -1em;
+	color: rgb(69, 195, 84);
+}
+.icon-wsp .path4:before {
+	content: '\e90e';
+	margin-left: -1em;
+	color: rgb(255, 255, 255);
+}
+.icon-wsp .path5:before {
+	content: '\e90f';
+	margin-left: -1em;
+	color: rgb(255, 255, 255);
+}

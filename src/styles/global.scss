@@ -1,0 +1,62 @@
+@import './fonts.scss';
+@import './reset.scss';
+
+.flex {
+	display: flex;
+
+	&.row {
+		flex-direction: row;
+	}
+
+	&.column {
+		flex-direction: column;
+	}
+}
+
+.container {
+	display: flex;
+	box-shadow: 0 2px 12px 0 rgba(230, 230, 230, 0.5);
+	border-radius: 12px;
+}
+
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.regular {
+	font-family: Poppins-Regular;
+}
+
+.medium {
+	font-family: Poppins-Regular;
+}
+
+.semi-bold {
+	font-family: Poppins-SemiBold;
+}
+
+.bold {
+	font-family: Poppins-Bold;
+}
+
+.extra-bold {
+	font-family: Poppins-ExtraBold;
+}
+
+.upper {
+	text-transform: uppercase;
+}
+
+.lower {
+	text-transform: lowercase;
+}
+
+.capitalize {
+	text-transform: capitalize;
+}
+
+.pointer {
+	cursor: pointer;
+}
