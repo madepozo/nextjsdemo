@@ -1,8 +1,11 @@
-import Link from 'next/link';
 import { db } from '../config/firebase-config';
 
-const HomePage = ({ commerces = [], success }) => {
-	return <div>Index Page!</div>;
+const Index = () => {
+	return (
+		<div>
+			<h2>Index Page!</h2>
+		</div>
+	);
 };
 
 export const getServerSideProps = async () => {
@@ -37,4 +40,4 @@ export const getServerSideProps = async () => {
 	}
 };
 
-export default HomePage;
+export default Index;
