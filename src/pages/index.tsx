@@ -39,19 +39,21 @@ export const getServerSideProps = async () => {
 
 		console.log('I got the data!');
 
-		const commerces = await data.val();
+		const value = await data.val();
 
-		console.log('I got the commerces:', Object.keys(commerces));
+		const commerces = Object.keys(value)
+			.map((key) => {
+				const { name, slug = '' } = value[key]?.data;
+
+				return { name, slug };
+			})
+			.filter((commerce) => commerce.slug);
+
+		console.log('I got the commerces:', commerces);
 
 		return {
 			props: {
-				commerces: Object.keys(commerces)
-					.map((key) => {
-						const { name, slug = '' } = commerces[key].data;
-
-						return { name, slug };
-					})
-					.filter((commerce) => !!commerce.slug)
+				commerces
 			}
 		};
 	} catch (err) {
