@@ -1,15 +1,27 @@
+import Link from 'next/link';
 import { db } from '../config/firebase-config';
 
-const Index = (props) => {
-	console.log('Props >', props);
+function Index(props) {
+	const { commerces } = props;
 	return (
-		<div>
-			<h2>Index Page!</h2>
-		</div>
+		<ul>
+			{commerces.map((commerce, index) => (
+				<li key={`Home-commerces-${commerce.name}-${index}`}>
+					{
+						<Link
+							href="/comercios/[commerceSlug]"
+							as={`/comercios/${commerce.slug}`}
+						>
+							<a>{commerce.name}</a>
+						</Link>
+					}
+				</li>
+			))}
+		</ul>
 	);
-};
+}
 
-export const getServerSideProps = async () => {
+export async function getServerSideProps() {
 	try {
 		const data: any = await new Promise((resolve, reject) => {
 			db.ref('/companies/489/0501662316001/commerces')
@@ -42,6 +54,6 @@ export const getServerSideProps = async () => {
 			}
 		};
 	}
-};
+}
 
 export default Index;
